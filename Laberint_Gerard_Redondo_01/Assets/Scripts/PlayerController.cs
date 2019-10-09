@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
 
+    public float healt;
+
     private Vector2 movement;
     public float speed = 50.0f;
 
