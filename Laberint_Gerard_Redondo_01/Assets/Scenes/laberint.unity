@@ -471,6 +471,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   speed: 5
+  timer: 0
+  max_time: 1
 --- !u!58 &1902302264
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -679,6 +681,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2140372979}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c87d14e155df7444bbbe3ff6f517ab2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d6c666241c194b46956fbf0a67a9d81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination: {fileID: 863328648}
