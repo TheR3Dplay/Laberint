@@ -870,8 +870,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  healt: 100
-  speed: 5
+  speed: 50
+  rotation: 5
+  vida: 0
   timer: 0
   max_time: 1
 --- !u!58 &1902302264

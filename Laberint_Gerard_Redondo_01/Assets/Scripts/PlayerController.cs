@@ -6,10 +6,16 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
 
-    public float healt;
+    [SerializeField]
+    float speed = 1f;
 
-    private Vector2 movement;
-    public float speed = 50.0f;
+    [SerializeField]
+    float rotation;
+
+    [SerializeField]
+    float vida;
+
+    Transform transformada;
 
     public float timer = 0.0f;
     public float max_time = 1.0f;
@@ -18,6 +24,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        transformada = GetComponent<Transform>();
 
         timer = 0.0f;
     }
@@ -25,13 +32,26 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        rb.velocity = new Vector3(0, 0);
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            rb.velocity = transform.up * speed * Time.deltaTime;
+        }
+
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            transformada.Rotate(0, 0, rotation * Time.deltaTime * speed);
+
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            transformada.Rotate(0, 0, -rotation * Time.deltaTime * speed);
+
+        }
 
         timer += Time.deltaTime;
-    }
-
-    void FixedUpdate()
-    {
-        rb.MovePosition((Vector2)transform.position + (movement * speed * Time.deltaTime));
     }
 }
