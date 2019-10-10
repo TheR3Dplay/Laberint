@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     float rotation;
 
     [SerializeField]
-    float vida;
+    public float vida;
 
     Transform transformada;
 
@@ -53,5 +53,8 @@ public class PlayerController : MonoBehaviour
         }
 
         timer += Time.deltaTime;
+
+        if (vida < 0)
+            Destroy(this.gameObject);
     }
 }

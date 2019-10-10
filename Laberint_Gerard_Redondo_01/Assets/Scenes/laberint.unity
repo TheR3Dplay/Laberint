@@ -872,7 +872,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   speed: 50
   rotation: 5
-  vida: 0
+  vida: 20
   timer: 0
   max_time: 1
 --- !u!58 &1902302264
