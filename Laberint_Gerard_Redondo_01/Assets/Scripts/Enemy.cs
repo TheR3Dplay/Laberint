@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
         transform.position = new Vector2(Mathf.PingPong(counter, lenght) + startPosition, transform.position.y);
     }
 
-    private void OnTriggerEnter2D(Collision2D jugador)
+    private void OnTriggerEnter2D(Collider2D jugador)
     {
         jugador.gameObject.GetComponent<PlayerController>().vida -= 30;
     }
